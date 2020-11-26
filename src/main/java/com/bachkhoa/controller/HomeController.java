@@ -39,4 +39,11 @@ public class HomeController {
 	public ModelAndView accessDenied() {
 		return new ModelAndView("redirect:/login?accessDenied");
 	}
+
+	@RequestMapping(value = "/error", method = RequestMethod.GET)
+	public ModelAndView errorPage() {
+		ModelAndView mav = new ModelAndView("error");
+		return mav;
+	}
+
 }
